@@ -82,5 +82,5 @@ app.use('/api', cartRouter);
 
 app.listen(port, function () {
 	console.log("Database connected");
-  console.log('Listening on port ' + PORT);
+  console.log('Listening on port ' + port);
 });
