@@ -75,7 +75,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.get(‘/’, function (req, res) {
+app.get('/', function (req, res) {
  res.send(JSON.stringify({ Hello: ‘World’}));
 });
 
