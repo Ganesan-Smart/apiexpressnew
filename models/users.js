@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 const AutoIncrement = require('mongoose-sequence')(mongoose);
 var userSchema = new Schema({
-  id: {
+  fid: {
     type: Number,
     unique: true,
     required: false
@@ -44,5 +44,5 @@ var userSchema = new Schema({
   },
 }, { collection: 'users' });
 
-userSchema.plugin(AutoIncrement, {inc_field: 'id'});
+userSchema.plugin(AutoIncrement, {inc_field: 'fid'});
 module.exports = mongoose.model('User', userSchema);
