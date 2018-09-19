@@ -42,8 +42,6 @@ var userSchema = new Schema({
     required: true,
     default: "potato"
   },
-},{
-    timestamps: true
 }, { collection: 'users' });
 
 userSchema.plugin(AutoIncrement, {inc_field: 'fid'});
