@@ -12,12 +12,6 @@ var port =process.env.PORT || 3000;;
 var HOST_NAME = 'localhost';
 var DATABASE_NAME = 'foodieee';
 
-
-
-
-
-
-
 var mongoose = require('mongoose');    
 
 var uri = 'mongodb://vicky:vickymaha123@ds261072.mlab.com:61072/foodieee';

@@ -162,4 +162,40 @@ itemRouter
     });
   });
 
+//update food quantity
+itemRouter
+  .route('/items/updatequantity/:foodId')
+  .put(function (request, response) {
+
+    console.log('Update available of items');
+
+    var foodId = request.params.foodId;
+
+    Item.findOne({ id: foodId }, function (error, item) {
+
+      if (error) {
+        response.status(500).send(error);
+        return;
+      }
+
+      if (item) {
+        item.available = request.body.available;
+
+        item.save();
+        console.log(item.available);
+ 
+          response.setHeader('Access-Control-Allow-Origin','*');
+         response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+         
+         
+        response.json(item);
+        return;
+      }
+
+      response.status(404).json({
+        message: 'Item with id ' + itemId + ' was not found.'
+      });
+    });
+  })
+
 module.exports = itemRouter;
