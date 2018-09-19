@@ -74,8 +74,6 @@ var cartSchema = new Schema({
   }
 
 
-},{
-    timestamps: true
 }, { collections: 'orders'});
 
 module.exports = mongoose.model('orders', cartSchema);
