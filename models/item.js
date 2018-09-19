@@ -82,8 +82,6 @@ var itemSchema = new Schema({
     required: false
   }
 
-},{
-    timestamps: true
 }, { collection: 'foods' });
 
 module.exports = mongoose.model('Item', itemSchema);
