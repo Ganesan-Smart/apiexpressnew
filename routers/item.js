@@ -69,9 +69,22 @@ itemRouter
 
       if (item) {
         item.name = request.body.name;
-        item.description = request.body.description;
+        item.img = request.body.img;
         item.quantity = request.body.quantity;
-        
+        item.available = request.body.available;
+        item.category = request.body.category;
+        item.breakfast = request.body.breakfast;
+        item.lunch = request.body.lunch;
+        item.dinner = request.body.dinner;
+        item.rating = request.body.rating;
+        item.price = request.body.price;
+        item.tax = request.body.tax;
+        item.provider_address = request.body.provider_address;
+        item.provider_id = request.body.provider_id;
+        item.provider_name = request.body.provider_name;
+        item.lat = request.body.lat;
+        item.lon = request.body.lon;
+        item.zoom = request.body.zoom;
         item.save();
 
         response.json(item);
